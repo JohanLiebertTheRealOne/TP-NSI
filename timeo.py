@@ -31,25 +31,29 @@
 #                 imin = i
 #         echange(tab, k, imin)
 
-def correspond(mot,mot_a_trous):
-    if len(mot) != len(mot_a_trous):
-        return False
-    liste_index = []
-    i =  0
-    for lettre in mot_a_trous:
-        if lettre == "*":
-            liste_index.append(i)
-            i += 1
-        elif lettre != "*":
-            i += 1
-    print(liste_index)
-    chaine = []
-    for lettre in mot:
-        chaine.append(lettre)
-    for index in liste_index:
-        chaine[index] = "*"
-    print(chaine)
-    return ''.join(chaine)==mot_a_trous
+# def correspond(mot,mot_a_trous):
+    # if len(mot) != len(mot_a_trous):
+        # return False
+    # liste_index = []
+    # i =  0
+    # for lettre in mot_a_trous:
+        # if lettre == "*":
+            # liste_index.append(i)
+            # i += 1
+        # elif lettre != "*":
+            # i += 1
+    # print(liste_index)
+    # chaine = []
+    # for lettre in mot:
+        # chaine.append(lettre)
+    # for index in liste_index:
+        # chaine[index] = "*"
+    # print(chaine)
+    # return ''.join(chaine)==mot_a_trous
 
-test = correspond("test","t*s*")
-print(test)
+def est_cyclique(plan):
+    expediteur = 'A'
+    destinataire = plan[0]
+    nb_destinataires = 1
+    while destinataire != expediteur:
+        pass
