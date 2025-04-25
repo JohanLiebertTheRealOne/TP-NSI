@@ -51,16 +51,47 @@
     # print(chaine)
     # return ''.join(chaine)==mot_a_trous
 
-adj = [[1, 2], [2], [0], [0]]
+# adj = [[1, 2], [2], [0], [0]]
 
-def voisins_entrants(adj:list, x):
-    voisin_liste = []
-    index = 0
-    for g in adj:
-        if x in g:
-            voisin_liste.append(index)
-        index += 1
-    return voisin_liste
+# def voisins_entrants(adj:list, x):
+#     voisin_liste = []
+#     index = 0
+#     for g in adj:
+#         if x in g:
+#             voisin_liste.append(index)
+#         index += 1
+#     return voisin_liste
 
 
-assert voisins_entrants([[1, 2], [2], [0], [0]], 0)==[2, 3]
+# assert voisins_entrants([[1, 2], [2], [0], [0]], 0)==[2, 3]
+
+# def max_et_indice(tab:list)->tuple:
+#     max = 0
+#     indice_max = 0
+#     for nombre in tab:
+#         if nombre > max:
+#             max = nombre
+#             indice_max += 1
+#     indice_max -= 1
+#     return max,indice_max
+
+# assert max_et_indice([1, 5, 6, 9, 1, 2, 3, 7, 9, 8])==(9, 3)
+
+def fibonacci(n):
+    a, b = 0, 1
+    for _ in range(n):
+        a, b = b, a + b
+    return a
+
+assert fibonacci(25)==75025
+
+def eleves_du_mois(eleves, notes):
+    note_maxi = 0
+    meilleurs_eleves = []
+    for i in range(len(eleves)):
+        if notes[i] == ...:
+            meilleurs_eleves.append(...)
+        elif notes[i] > note_maxi:
+            note_maxi = ...
+            meilleurs_eleves = [...]
+    return (note_maxi, meilleurs_eleves)
