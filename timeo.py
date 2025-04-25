@@ -51,9 +51,16 @@
     # print(chaine)
     # return ''.join(chaine)==mot_a_trous
 
-def est_cyclique(plan):
-    expediteur = 'A'
-    destinataire = plan[0]
-    nb_destinataires = 1
-    while destinataire != expediteur:
-        pass
+adj = [[1, 2], [2], [0], [0]]
+
+def voisins_entrants(adj:list, x):
+    voisin_liste = []
+    index = 0
+    for g in adj:
+        if x in g:
+            voisin_liste.append(index)
+        index += 1
+    return voisin_liste
+
+
+assert voisins_entrants([[1, 2], [2], [0], [0]], 0)==[2, 3]
