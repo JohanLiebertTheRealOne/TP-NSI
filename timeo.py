@@ -95,3 +95,13 @@ def eleves_du_mois(eleves, notes):
             note_maxi = ...
             meilleurs_eleves = [...]
     return (note_maxi, meilleurs_eleves)
+
+def recherche(tab:list,n:int):
+    index = 0
+    for valeur in tab:
+        if valeur==n:
+            return index
+        index += 1
+    return None
+
+assert recherche([2,4],2)==0
