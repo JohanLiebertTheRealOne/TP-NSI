@@ -53,29 +53,29 @@
 
 # adj = [[1, 2], [2], [0], [0]]
 
-# def voisins_entrants(adj:list, x):
-#     voisin_liste = []
-#     index = 0
-#     for g in adj:
-#         if x in g:
-#             voisin_liste.append(index)
-#         index += 1
-#     return voisin_liste
+def voisins_entrants(adj:list, x):
+    voisin_liste = []
+    index = 0
+    for g in adj:
+        if x in g:
+            voisin_liste.append(index)
+        index += 1
+    return voisin_liste
 
 
-# assert voisins_entrants([[1, 2], [2], [0], [0]], 0)==[2, 3]
+assert voisins_entrants([[1, 2], [2], [0], [0]], 0)==[2, 3]
 
-# def max_et_indice(tab:list)->tuple:
-#     max = 0
-#     indice_max = 0
-#     for nombre in tab:
-#         if nombre > max:
-#             max = nombre
-#             indice_max += 1
-#     indice_max -= 1
-#     return max,indice_max
+def max_et_indice(tab:list)->tuple:
+    max = 0
+    indice_max = 0
+    for nombre in tab:
+        if nombre > max:
+            max = nombre
+            indice_max += 1
+    indice_max -= 1
+    return max,indice_max
 
-# assert max_et_indice([1, 5, 6, 9, 1, 2, 3, 7, 9, 8])==(9, 3)
+assert max_et_indice([1, 5, 6, 9, 1, 2, 3, 7, 9, 8])==(9, 3)
 
 def fibonacci(n):
     a, b = 0, 1
