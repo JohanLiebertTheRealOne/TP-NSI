@@ -153,8 +153,8 @@ def ajoute(indice, element, tab):
     nbre_elts = len(tab)
     tab_ins = [0] * (nbre_elts + 1)
     for i in range(indice):
-        tab_ins[i] = element
-        tab_ins[...] = ...
+        tab_ins[i] = tab[i]  # Copier les éléments avant l’indice
+    tab_ins[indice] = element  # Insérer l’élément à l’indice
     for i in range(indice + 1, nbre_elts + 1):
-        tab_ins[i] = ...
+        tab_ins[i] = tab[i - 1]  # Décaler les éléments suivants
     return tab_ins
